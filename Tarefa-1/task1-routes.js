@@ -32,8 +32,8 @@ const requestHandler = (req, res) => {
     if (url === '/create-user' && method === 'POST') {
         let body = [];
         req.on('data', chunk => {
-            // console.log(chunk) => chunk é uma parte fragmentada do código do tipo Buffer (dado em binário). Se em uma requisição os dados forem muito grandes
-            // a requisição manda os dados em "pedaços"menores (os chunks). 
+            // console.log(chunk) => chunk é uma parte fragmentada do código do tipo Buffer (dado em binário). 
+            // Se em uma requisição os dados forem muito grandes a requisição manda os dados em "pedaços" menores (os chunks). 
             body.push(chunk);
         });
         return req.on('end', () => {
