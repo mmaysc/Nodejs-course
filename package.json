@@ -16,5 +16,8 @@
     "url": "https://github.com/mmaysc/Nodejs-course/issues"
   },
   "homepage": "https://github.com/mmaysc/Nodejs-course#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
