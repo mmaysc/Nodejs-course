@@ -4,8 +4,10 @@ const express = require('express');
 
 const app = express();
 
-const server = http.createServer(app);
-    //process.exit(); -> encerra o processo do servidor, saindo do event loop, quando 
-    //o programa não tem mais trabalho a fazer. 
+app.use((req, res, next) => {
+    console.log('In the middleware');
+    res.send('<h1> Hello from Express</h1>')
+});
 
-server.listen(3000);
+
+app.listen(3000);
